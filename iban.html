@@ -5,6 +5,26 @@
     <meta charset="UTF-8">
     <title>IBAN Kontrol</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .iban-box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 40px auto;
+            text-align: center;
+        }
+        .iban-box h1 {
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            width: 100%;
+            max-width: 500px;
+            padding: 12px;
+            font-size: 16px;
+        }
+    </style>
     <script>
         function validateIBAN() {
             const iban = document.getElementById("iban").value.replace(/\s+/g, '').toUpperCase();
@@ -17,7 +37,6 @@
                 return;
             }
 
-            // Mod 97 kontrolü (basit)
             const rearranged = iban.slice(4) + iban.slice(0, 4);
             const converted = rearranged.replace(/[A-Z]/g, c => c.charCodeAt(0) - 55);
             const remainder = BigInt(converted) % 97n;
@@ -32,15 +51,21 @@
     </script>
 </head>
 <body>
-    <img src="logo.png" alt="Logo" width="100">
-    <h1>IBAN Kontrol Sayfası</h1>
+<header>
+    <img src="logo.png" alt="Logo">
     <nav>
         <a href="index.html">Ana Sayfa</a>
         <a href="iban.html">IBAN Kontrol</a>
     </nav>
-    <p>Lütfen IBAN numaranızı girin:</p>
-    <input type="text" id="iban" placeholder="TR00 0000 0000 0000 0000 0000 00">
-    <button onclick="validateIBAN()">Kontrol Et</button>
-    <p id="result"></p>
+</header>
+<main>
+    <div class="iban-box">
+        <h1>IBAN Doğrulama</h1>
+        <input type="text" id="iban" placeholder="TR00 0000 0000 0000 0000 0000 00">
+        <br><br>
+        <button onclick="validateIBAN()">Kontrol Et</button>
+        <p id="result"></p>
+    </div>
+</main>
 </body>
 </html>

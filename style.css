@@ -1,33 +1,40 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f7f9fc;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 20px;
 }
-h1 {
-    color: #003366;
+header {
+    display: flex;
+    align-items: center;
+    background-color: #003366;
+    color: white;
+    padding: 10px;
 }
-nav {
-    margin-bottom: 20px;
+header img {
+    height: 50px;
+    margin-right: 20px;
 }
 nav a {
-    margin-right: 15px;
+    color: white;
     text-decoration: none;
-    color: #0077cc;
+    margin-right: 15px;
+    font-weight: bold;
 }
 nav a:hover {
     text-decoration: underline;
+}
+main {
+    margin-top: 20px;
 }
 input[type="text"] {
     padding: 10px;
     width: 300px;
     margin-right: 10px;
-    font-size: 16px;
 }
 button {
     padding: 10px 20px;
-    font-size: 16px;
     background-color: #0077cc;
     color: white;
     border: none;
