@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>IBAN Kontrol</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function validateIBAN() {
+            const iban = document.getElementById("iban").value.trim().replace(/\s+/g, '');
+            const result = document.getElementById("result");
+            const regex = /^[A-Z]{2}\d{2}[A-Z0-9]{1,30}$/;
+            if (!regex.test(iban)) {
+                result.textContent = "Geçersiz IBAN formatı!";
+                result.style.color = "red";
+                return;
+            }
+            result.textContent = "IBAN formatı geçerli.";
+            result.style.color = "green";
+        }
+    </script>
+</head>
+<body>
+    <img src="logo.png" alt="Logo" width="120">
+    <h1>IBAN Kontrol Sayfası</h1>
+    <nav>
+        <a href="index.html">Ana Sayfa</a> |
+        <a href="iban.html">IBAN Kontrol</a>
+    </nav>
+    <p>IBAN numaranızı girin:</p>
+    <input type="text" id="iban" placeholder="TR00 0000 0000 0000 0000 0000 00" size="30">
+    <button onclick="validateIBAN()">Kontrol Et</button>
+    <p id="result"></p>
+</body>
+</html>
